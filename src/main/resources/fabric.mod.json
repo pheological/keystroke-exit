@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "keystroke-exit",
+	"version": "${1.0}",
+	"name": "keystroke-exit",
+	"description": "Everytime a keystroke is pressed, it exits a chest or inventory gui",
+	"authors": [
+		"Pheological"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/keystroke-exit/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"keystrokes.pheological.Keystrokeexit"
+		],
+		"client": [
+			"keystrokes.pheological.KeystrokeexitClient"
+		]
+	},
+	"mixins": [
+		"keystroke-exit.mixins.json",
+		{
+			"config": "keystroke-exit.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.1",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
