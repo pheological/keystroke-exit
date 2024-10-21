@@ -16,7 +16,7 @@ public class KeystrokeexitClient implements ClientModInitializer {
 			if (client.currentScreen instanceof HandledScreen) {
 				HandledScreen<?> screen = (HandledScreen<?>) client.currentScreen;
 
-				if (isKeyPressed(GLFW.GLFW_KEY_W) ||
+				if (isKeyPressed(GLFW.GLFW_KEY_W) || // Change these to your strafe keys if you don't use WASD
 						isKeyPressed(GLFW.GLFW_KEY_A) ||
 						isKeyPressed(GLFW.GLFW_KEY_S) ||
 						isKeyPressed(GLFW.GLFW_KEY_D)) {
