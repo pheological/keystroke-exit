@@ -20,7 +20,7 @@ public class KeystrokeexitClient implements ClientModInitializer {
 						isKeyPressed(GLFW.GLFW_KEY_A) ||
 						isKeyPressed(GLFW.GLFW_KEY_S) ||
 						isKeyPressed(GLFW.GLFW_KEY_D)) {
-					client.setScreen(null);
+					client.setScreen(null); //Exits any GUI
 				}
 			}
 		});
