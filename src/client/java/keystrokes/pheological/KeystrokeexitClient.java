@@ -16,18 +16,20 @@ public class KeystrokeexitClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			if (client.currentScreen instanceof HandledScreen) {
-				HandledScreen<?> screen = (HandledScreen<?>) client.currentScreen;
-
-				if (isKeyPressedOnce(GLFW.GLFW_KEY_W, wasWPressed, keyState -> wasWPressed = keyState) || //Change keys to your liking here
+			if (client.player != null && client.currentScreen instanceof HandledScreen && !client.player.getAbilities().creativeMode) { //Creative Mode
+				if (isKeyPressedOnce(GLFW.GLFW_KEY_W, wasWPressed, keyState -> wasWPressed = keyState) ||
 						isKeyPressedOnce(GLFW.GLFW_KEY_A, wasAPressed, keyState -> wasAPressed = keyState) ||
 						isKeyPressedOnce(GLFW.GLFW_KEY_S, wasSPressed, keyState -> wasSPressed = keyState) ||
 						isKeyPressedOnce(GLFW.GLFW_KEY_D, wasDPressed, keyState -> wasDPressed = keyState)) {
+
+					// Close inventory
 					client.setScreen(null);
+
 				}
 			}
 		});
 	}
+
 	private boolean isKeyPressedOnce(int keyCode, boolean wasKeyPreviouslyPressed, java.util.function.Consumer<Boolean> updateKeyState) {
 		boolean isCurrentlyPressed = InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), keyCode);
 
@@ -40,4 +42,5 @@ public class KeystrokeexitClient implements ClientModInitializer {
 
 		return false;
 	}
+
 }
