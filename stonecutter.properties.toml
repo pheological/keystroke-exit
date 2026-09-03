@@ -1,0 +1,59 @@
+loomx.loom_version="1.16-SNAPSHOT"
+
+mod.id = "keystrokeexit"
+mod.name = "Keystroke Exit"
+mod.group = "dev.pheological"
+mod.version = "3.0.0"
+mod.channel_tag = ""
+mod.description = "Press W, A, S, or D to leave a container screen without interrupting text input."
+mod.authors = ["pheological"]
+mod.contributors = []
+mod.inception_year = "2024"
+mod.license.name = "CC0-1.0"
+mod.license.url = "https://creativecommons.org/publicdomain/zero/1.0/"
+mod.license.dist = "repo"
+mod.sources_url = "https://github.com/pheological/keystroke-exit"
+mod.homepage_url = "https://github.com/pheological/keystroke-exit"
+mod.issues_url = "https://github.com/pheological/keystroke-exit/issues"
+mod.discord_url = ""
+
+[[mod.pom.developers]]
+id = "pheological"
+name = "pheological"
+url = "https://github.com/pheological"
+
+[fabric]
+deps.fabric-loader = "0.19.3"
+
+[fabric."1.21.1"]
+deps.minecraft = "1.21.1"
+deps.minecraft-range = ">=1.21 <=1.21.1"
+publish.additionalVersions = ["1.21"]
+
+[fabric."1.21.4"]
+deps.minecraft = "1.21.4"
+deps.minecraft-range = ">=1.21.2 <=1.21.5"
+publish.additionalVersions = ["1.21.2", "1.21.3", "1.21.5"]
+
+[fabric."1.21.7"]
+deps.minecraft = "1.21.7"
+deps.minecraft-range = ">=1.21.6 <=1.21.8"
+publish.additionalVersions = ["1.21.6", "1.21.8"]
+
+[fabric."1.21.10"]
+deps.minecraft = "1.21.10"
+deps.minecraft-range = ">=1.21.9 <=1.21.10"
+publish.additionalVersions = ["1.21.9"]
+
+[fabric."1.21.11"]
+deps.minecraft = "1.21.11"
+deps.minecraft-range = "1.21.11"
+
+[fabric."26.1.2"]
+deps.minecraft = "26.1.2"
+deps.minecraft-range = ">=26.1 <=26.1.2"
+publish.additionalVersions = ["26.1", "26.1.1"]
+
+[fabric."26.2"]
+deps.minecraft = "26.2"
+deps.minecraft-range = "26.2"
